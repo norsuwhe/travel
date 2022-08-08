@@ -1,4 +1,4 @@
-class MobileNavigation {
+export class MobileNavigation {
     constructor() {
         this.menuState = false;
         this.menuButton = document.querySelector('.header__menu');
@@ -34,5 +34,3 @@ class MobileNavigation {
         window.addEventListener('click', this.closeMenu)
     }
 }
-
-navigation = new MobileNavigation();

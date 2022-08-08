@@ -1,4 +1,4 @@
-class imageSlider {
+export class ImageSlider {
     constructor() {
         this.sliderItems = document.querySelector('.image-slider__items');
         this.sliderImage = document.querySelector('.image-slider__image');
@@ -90,5 +90,3 @@ class imageSlider {
         this.sliderItems.addEventListener('transitionend', this.appendOnTransitionEnd)
     }
 }
-
-let slider = new imageSlider();

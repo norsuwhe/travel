@@ -1,4 +1,4 @@
-class popUp {
+export class PopUp {
     constructor() {
         this.isPopUpOpen = false;
         this.popUp = document.querySelector('.pop-up')
@@ -70,5 +70,3 @@ class popUp {
         this.logInLink.addEventListener('click', this.changeToLogin)
     }
 }
-
-login = new popUp();

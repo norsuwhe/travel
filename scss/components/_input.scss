@@ -1,0 +1,24 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__label {
+        font-size: 1rem;
+        line-height: 19px;
+        color: $color-main-blue;
+        align-self: flex-start;
+        margin-bottom: 5px;
+    }
+
+    &__text {
+        height: 54px;
+        background: $color-white;
+        box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+        border-radius: 10px;
+        border: none;
+        text-indent: 20px;
+        font-size: 20px;
+        color: $color-main-blue;
+    }
+}

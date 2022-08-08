@@ -1,0 +1,145 @@
+@import '../variables';
+
+.image-slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 16px;
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        position: relative;
+        transition: transform 0.5s ease;
+        margin-right: -857px;
+        margin-bottom: 18px;
+
+    }
+
+    &__item {
+        position: relative;
+    }
+
+    &__image {
+        border-radius: 16px;
+    }
+
+    &__name {
+        position: absolute;
+        bottom: 6%;
+        left: 2%;
+        color: $color-white;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 42px;
+        font-family: $font-red-hat;
+    }
+
+    &__button {
+        display: none;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 11px;
+    }
+
+    &__indicator {
+        width: 20px;
+        height: 20px;
+        background: rgba(242, 120, 92, 0.5);
+        border-radius: 50%;
+
+        &_active {
+            background-color: $color-main-orange;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .image-slider {
+        max-width: 92%;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        overflow: hidden;
+
+        &__items {
+            display: flex;
+            justify-content: flex-start;
+            margin-right: 0px;
+            overflow: hidden;
+            position: static;
+            margin-right: -100%;
+            margin-bottom: 0;
+            gap: 0;
+        }
+
+        &__button {
+            display: block;
+            border: 0;
+            background-color: transparent;
+            position: absolute;
+            z-index: 10;
+            height: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &__button_left {
+            left: 0%;
+            padding: 0 30vw 0 3vw;
+        }
+
+        &__button_right {
+            right: 0;
+            padding: 0 3vw 0 30vw;
+        }
+
+        &__item {
+            flex: 1 1 0;
+            height: 210px;
+        }
+
+        &__image {
+            width: 92vw;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        &__name {
+            position: absolute;
+            bottom: 80%;
+            left: 4%;
+            color: $color-white;
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 42px;
+            font-family: $font-red-hat;
+        }
+
+        &__nav {
+            display: flex;
+            gap: 6px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 190px;
+        }
+
+
+        &__indicator {
+            width: 8px;
+            height: 8px;
+            background: rgba(242, 120, 92, 0.5);
+
+            border-radius: 50%;
+
+            &_active {
+                background-color: $color-main-orange;
+            }
+        }
+    }
+}

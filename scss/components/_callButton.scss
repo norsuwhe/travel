@@ -1,0 +1,38 @@
+.call-button {
+    display: flex;
+    align-items: center;
+    padding: 15px 33px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border: none;
+    position: relative;
+    transition: background-color 0.5s ease;
+
+
+    &__arrow {
+        position: relative;
+        margin-right: 10px;
+    }
+
+    &:hover {
+        background-color: #094a55;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .call-button {
+        font-size: 0.6875rem;
+        padding: 9px 11px;
+
+        &__arrow {
+            width: 10px;
+            margin-right: 6px;
+        }
+    }
+}

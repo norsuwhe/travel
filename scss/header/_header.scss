@@ -1,0 +1,126 @@
+@import '../variables';
+
+.header {
+    width: 100%;
+    position: absolute;
+    background: rgba(242, 120, 92, 0.7);
+    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 90px;
+    }
+
+    &__logo {
+        &_mobile {
+            display: none;
+        }
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    &__link {
+        font-family: $font-red-hat;
+        color: $color-white;
+        font-weight: 500;
+        font-size: 1rem;
+        text-decoration: none;
+
+        &_mobile {
+            display: none;
+        }
+    }
+
+    &__login-button {
+        padding: 10px 30px;
+        border: none;
+        background: $color-main-blue;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+        border-radius: 10px;
+        font-family: $font-red-hat;
+        color: $color-white;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: background-color 0.5s ease;
+
+        &:hover {
+            background-color: $color-main-blue-dark;
+        }
+    }
+
+    &__menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .header {
+        background: none;
+        box-shadow: none;
+
+        &__content {
+            padding-top: 30px;
+        }
+
+        &__mobile-nav {
+            position: absolute;
+            top: 41%;
+            right: 0;
+            padding-left: 10vw;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        &__links {
+            position: relative;
+            z-index: 3;
+            top: 41%;
+            right: 3vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 26px;
+            background-color: $color-main-orange;
+            padding: 46px;
+            border-radius: 16px;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            pointer-events: auto;
+
+            &_active {
+                transform: none;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &__link {
+            &_mobile {
+                display: block;
+            }
+        }
+
+        &__menu {
+            display: block;
+            position: relative;
+            z-index: 5;
+        }
+
+        &__logo {
+            display: none;
+
+            &_mobile {
+                display: block;
+            }
+        }
+
+        &__login-button {
+            display: none;
+        }
+    }
+}

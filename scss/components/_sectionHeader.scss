@@ -1,0 +1,14 @@
+@import '../variables';
+
+.section-header {
+    color: $color-main-orange;
+    font-size: 2.5rem;
+    font-family: $font-red-hat;
+    text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+    .section-header {
+        font-size: 0.875rem;
+    }
+}

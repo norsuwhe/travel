@@ -1,0 +1,21 @@
+.destinations {
+    &__section-header {
+        margin-bottom: 46px;
+    }
+
+    &__call-button {
+        margin: 0 auto;
+    }
+
+    &__image-slider {
+        margin-bottom: 41px;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .destinations {
+        &__section-header {
+            margin-bottom: 21px;
+        }
+    }
+}
